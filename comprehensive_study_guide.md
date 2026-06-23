@@ -194,3 +194,12 @@ This section breaks down the foundational buzzwords used throughout this project
 - **Pandas:** A powerful Python library used for data manipulation and analysis. It introduces "DataFrames" (essentially highly programmable Excel spreadsheets) that allow you to easily filter, group, and calculate statistics on massive CSV datasets.
 - **Matplotlib:** The foundational plotting library in Python. It is used to generate the bar charts and line graphs from the data processed by Pandas.
 - **NumPy:** A library adding support for large, multi-dimensional arrays and matrices, along with high-level mathematical functions. In our script, it was used to perfectly align the X-axis positions of the multi-bar charts (`np.arange`).
+
+### Version Control (Git Push Sequence)
+For reference, here is the exact sequence of commands used to initialize, commit, and force-push this project to a new GitHub repository to bypass remote history conflicts:
+- `git init`: Initializes a brand new, empty Git repository in the current folder.
+- `git add .`: Stages all files in the directory (respecting `.gitignore`) for the next commit.
+- `git commit -m "Initial commit"`: Packages all staged files into a permanent snapshot.
+- `git branch -M main`: Renames the default local branch from `master` to `main` to match GitHub's modern standard.
+- `git remote add origin <URL>`: Links your local repository to the remote GitHub server.
+- `git push -u origin main --force`: Uploads your code and violently overwrites the server's history to resolve any conflicts (such as an auto-generated GitHub README).
