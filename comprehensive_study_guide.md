@@ -203,3 +203,11 @@ For reference, here is the exact sequence of commands used to initialize, commit
 - `git branch -M main`: Renames the default local branch from `master` to `main` to match GitHub's modern standard.
 - `git remote add origin <URL>`: Links your local repository to the remote GitHub server.
 - `git push -u origin main --force`: Uploads your code and violently overwrites the server's history to resolve any conflicts (such as an auto-generated GitHub README).
+
+### Advanced Git Operations
+- **`git merge`:** Combines two branches. It creates a "merge commit" that ties the histories together, preserving the exact chronological timeline of every small commit made on a feature branch.
+- **`git rebase`:** Takes the commits from your feature branch and cleanly "replays" them on top of the main branch. This creates a perfectly straight, linear history without any messy merge commits, though rewriting history can cause issues if the branch was already shared.
+- **Squash Merge:** Combines an entire feature branch (which might contain dozens of messy "work in progress" commits) into one single, clean, polished commit before adding it to the main branch.
+- **`git revert`:** Safely undoes a specific past commit by creating a brand new "inverse" commit. It preserves the project's timeline, making it the safest way to undo a mistake that has already been pushed to a public repository.
+- **`git reset`:** Moves your project backward in time. Using `--hard` reset completely erases all newer commits and working changes, permanently making your code look exactly as it did at the target commit.
+- **`git checkout`:** Used to switch between branches or jump back to an older commit (in a "detached HEAD" state) just to safely view the old code without deleting anything.
