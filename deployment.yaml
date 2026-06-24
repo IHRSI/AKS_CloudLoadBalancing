@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-server
+  labels:
+    app: web-server
+spec:
+  replicas: 2                          # 2 pods = 1 per node
+  selector:
+    matchLabels:
+      app: web-server
+  template:
+    metadata:
+      labels:
+        app: web-server
+    spec:
+      containers:
+      - name: web-server
+        image: mendhak/http-https-echo  # Returns pod name in response
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            cpu: "100m"                 # Reserves 0.1 CPU core
+            memory: "64Mi"             # Reserves 64 MB RAM
+          limits:
+            cpu: "250m"                # Max 0.25 CPU core
+            memory: "128Mi"            # Max 128 MB RAM
+        env:
+        - name: HTTP_PORT
+          value: "8080"
