@@ -1,2 +1,0 @@
-Method,Name,Error,Occurrences,First Seen,Last Seen
-GET,Light Request,HTTPError('502 Server Error: Bad Gateway for url: Light Request'),3,2026-06-19T19:00:38Z,2026-06-19T19:00:38Z
