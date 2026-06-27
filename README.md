@@ -61,9 +61,29 @@ The following table summarizes the data automatically extracted and mathematical
 
 This repository serves as both a codebase and an academic study guide.
 
+* 🎓 **[`Comparative_Analysis_of_NGINX_Ingress_Load_Balancing_Algos.pdf`](./A_Comparative_Analysis_of_NGINX_Ingress_Load_Balancing_Algorithms.pdf)**: The final academic research paper formatted for IEEE, detailing the methodology, results, and conclusions of this study.
 * 📄 **[`master_implementation_plan.md`](./master_implementation_plan.md)**: The step-by-step architectural blueprint, setup instructions, and the embedded Python analysis script.
-* 📚 **[`comprehensive_study_guide.md`](./comprehensive_study_guide.md)**: An interview-ready, deeply theoretical breakdown of Cloud Computing, Kubernetes architecture, and what the data actually means.
+* 📚 **[`comprehensive_study_guide.md`](./comprehensive_study_guide.md)**: A deeply theoretical breakdown of Cloud Computing, Kubernetes architecture, and what the data actually means.
 * 📊 **[`analyze_results.py`](./analyze_results.py)**: A fully automated Python data extraction and visualization pipeline.
+
+---
+
+## 🗂️ Repository Structure
+
+```text
+.
+├── 🎓 A_Comparative_Analysis_of_NGINX_Ingress_Load_Balancing_Algorithms.pdf
+├── 📝 IEEE_Report_code.tex
+├── 📄 master_implementation_plan.md
+├── 📚 comprehensive_study_guide.md
+├── 📊 analyze_results.py
+├── 🐍 locustfile.py
+├── ⚙️ deployment.yaml, service.yaml, ingress-*.yaml (Kubernetes Configs)
+├── 🗂️ Metrics-Graphs_Tables/    # Auto-generated visualization graphs & MD tables
+├── 🗂️ users_baseline_50/        # Raw Locust data for baseline testing
+├── 🗂️ users_cpu_100/            # Raw CPU metrics for load distribution testing
+└── 🗂️ users_fault_200/          # Raw Locust data for HA/recovery testing
+```
 
 ---
 
